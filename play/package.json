@@ -1,0 +1,9 @@
+{
+  "name": "@pies-ui/play",
+  "scripts": {
+    "dev": "vite"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}

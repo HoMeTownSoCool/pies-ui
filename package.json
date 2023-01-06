@@ -1,0 +1,37 @@
+{
+  "name": "pies-ui",
+  "private": true,
+  "version": "1.0.0",
+  "description": "A Vue 3 Component Library.Uses TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "play:dev": "pnpm run --filter ./play dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HoMeTownSoCool/pies-ui.git"
+  },
+  "keywords": [
+    "vue3",
+    "pies",
+    "ui",
+    "library",
+    "component",
+    "js",
+    "ts",
+    "vue"
+  ],
+  "author": "HoMeTown <hometownsocool@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HoMeTownSoCool/pies-ui/issues"
+  },
+  "homepage": "https://github.com/HoMeTownSoCool/pies-ui#readme",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "less": "^4.1.3",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.4",
+    "vue": "^3.2.36"
+  }
+}

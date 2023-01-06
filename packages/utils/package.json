@@ -1,0 +1,6 @@
+{
+  "name": "@pies-ui/utils",
+  "main": "index.ts",
+  "author": "HoMeTown <hometownsocool@gmail.com>",
+  "license": "MIT"
+}
