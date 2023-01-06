@@ -5,5 +5,11 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "@pies-ui/components": "workspace:*",
+    "@pies-ui/utils": "workspace:^1.0.0"
+  },
+  "devDependencies": {
+    "vite-plugin-vue-setup-extend": "^0.4.0"
+  }
 }

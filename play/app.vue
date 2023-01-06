@@ -1,4 +1,6 @@
-/* app.vue */
 <template>
-  <h1>我是开发调试页面</h1>
+  <div>
+    <pies-button size="large" type="success" />
+  </div>
 </template>
+<script setup lang="ts"></script>

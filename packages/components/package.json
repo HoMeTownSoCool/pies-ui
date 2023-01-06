@@ -2,5 +2,8 @@
   "name": "@pies-ui/components",
   "main": "index.ts",
   "author": "HoMeTown <hometownsocool@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@pies-ui/utils": "workspace:*"
+  }
 }
