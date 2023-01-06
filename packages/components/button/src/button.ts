@@ -1,4 +1,5 @@
-import { ExtractPropTypes } from "vue";
+import { ExtractPropTypes, PropType } from "vue";
+
 export const ButtonType = [
   "primary",
   "success",
