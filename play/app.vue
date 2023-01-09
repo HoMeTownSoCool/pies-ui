@@ -4,9 +4,9 @@
     <div>
       <h2>按钮大小</h2>
       <div>
-        <pies-button size="small">small</pies-button>
-        <pies-button>default</pies-button>
-        <pies-button size="large">large</pies-button>
+        <pies-button type="primary" size="small">small</pies-button>
+        <pies-button type="primary">default</pies-button>
+        <pies-button type="primary" size="large">large</pies-button>
       </div>
     </div>
 

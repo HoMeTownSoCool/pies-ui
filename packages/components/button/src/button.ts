@@ -11,7 +11,7 @@ export const Props = {
   /** 按钮的类型 */
   type: {
     type: String as PropType<ButtonType>,
-    default: (): ButtonType => "default",
+    default: (): undefined => undefined,
     validator(value: ButtonType) {
       return (
         ["default", "primary", "success", "info", "warning", "error"] as const
@@ -21,7 +21,7 @@ export const Props = {
   /** 按钮的权重 */
   weight: {
     type: String as PropType<ButtonWeight>,
-    default: (): ButtonWeight => "default",
+    default: (): undefined => undefined,
     validator(value: ButtonWeight) {
       return (
         ["default", "secondary", "tertiary", "quaternary"] as const
@@ -31,7 +31,7 @@ export const Props = {
   /** 按钮的大小 */
   size: {
     type: String as PropType<ButtonSize>,
-    default: (): ButtonSize => "default",
+    default: (): undefined => undefined,
     validator(value: ButtonSize) {
       return (["small", "default", "large"] as const).includes(value);
     },
