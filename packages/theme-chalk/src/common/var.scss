@@ -1,0 +1,92 @@
+/** light
+-----------------
+*/
+
+$color-primary: #2a3aaf !default;
+$color-success: #18a058 !default;
+$color-warning: #f0a020 !default;
+$color-danger: #d03050 !default;
+$color-info: #8c8c8c !default;
+
+$color-white: #fff;
+$color-black: #000;
+$color-primary-light-1: mix($color-white, $color-primary, 10%) !default;
+$color-primary-light-2: mix($color-white, $color-primary, 20%) !default;
+$color-primary-light-3: mix($color-white, $color-primary, 30%) !default;
+$color-primary-light-4: mix($color-white, $color-primary, 40%) !default;
+$color-primary-light-5: mix($color-white, $color-primary, 50%) !default;
+$color-primary-light-6: mix($color-white, $color-primary, 60%) !default;
+$color-primary-light-7: mix($color-white, $color-primary, 70%) !default;
+$color-primary-light-8: mix($color-white, $color-primary, 80%) !default;
+$color-primary-light-9: mix($color-white, $color-primary, 90%) !default;
+
+$color-success-light: mix($color-white, $color-success, 80%) !default;
+$color-warning-light: mix($color-white, $color-warning, 80%) !default;
+$color-danger-light: mix($color-white, $color-danger, 80%) !default;
+$color-info-light: mix($color-white, $color-info, 80%) !default;
+
+$color-text-primary: #303133 !default;
+$color-text-regular: #606266 !default;
+
+/** Border
+-----------------
+*/
+$border-width-base: 1px !default;
+$border-style-base: solid !default;
+$border-color-base: #d9d9d9 !default;
+$border-base: $border-width-base $border-style-base $border-color-base !default;
+$border-radius-base: 4px !default;
+
+/** Typography
+-----------------
+*/
+$font-weight-primary: 500 !default;
+$font-weight-secondary: 100 !default;
+$font-size-base: 14px !default;
+$font-size-small: 13px !default;
+$font-line-height-primary: 24px !default;
+$font-lint-height-secondary: 16px !default;
+$font-color-disabled-base: #bbb;
+
+/** Button
+-----------------
+*/
+
+$button-default-font-color: $color-text-regular !default;
+$button-default-background-color: $color-white !default;
+$button-default-border-color: $border-color-base !default;
+$button-default-font-size: $font-size-base !default;
+$button-default-font-weight: $font-weight-primary !default;
+$button-default-border-radius: $border-radius-base !default;
+$button-default-padding-vertical: 9px !default;
+$button-default-padding-horizontal: 15px !default;
+
+$button-large-font-size: 16px !default;
+$button-large-border-radius: #{$border-radius-base + 2} !default;
+$button-large-padding-vertical: 10px !default;
+$button-large-padding-horizontal: 20px !default;
+
+$button-small-font-size: 12px !default;
+$button-small-border-radius: #{$border-radius-base - 2} !default;
+$button-small-padding-vertical: 7px !default;
+$button-small-padding-horizontal: 15px !default;
+
+$button-primary-font-color: $color-white !default;
+$button-primary-background-color: $color-primary !default;
+$button-primary-border-color: $color-primary !default;
+$button-success-font-color: $color-white !default;
+$button-success-background-color: $color-success !default;
+$button-success-border-color: $color-success !default;
+$button-warning-font-color: $color-white !default;
+$button-warning-background-color: $color-warning !default;
+$button-warning-border-color: $color-warning !default;
+$button-danger-font-color: $color-white !default;
+$button-danger-background-color: $color-danger !default;
+$button-danger-border-color: $color-danger !default;
+$button-info-font-color: $color-white !default;
+$button-info-background-color: $color-info !default;
+$button-info-border-color: $color-info !default;
+
+$button-hover-tint-percent: 20% !default;
+$button-active-shade-percent: 10% !default;
+$button-shadow-tint-percent: 5% !default;

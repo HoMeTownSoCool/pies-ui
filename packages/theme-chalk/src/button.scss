@@ -1,0 +1,112 @@
+@use "common/var" as *;
+@use "mixins/button" as *;
+@use "mixins/mixins" as *;
+@use "mixins/utils" as *;
+
+@include b(button) {
+  display: inline-block;
+  margin: 0;
+  font-weight: $button-default-font-weight;
+  line-height: 1;
+  color: $button-default-font-color;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: $button-default-background-color;
+  border: $border-base;
+  border-color: $button-default-border-color;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.1s;
+  appearance: none;
+  @include utils-user-select(none);
+  & + & {
+    margin-left: 10px;
+  }
+  @include button-size(
+    $button-default-padding-vertical,
+    $button-default-padding-horizontal,
+    $button-default-font-size,
+    $button-default-border-radius
+  );
+  @include button-shadow($button-default-border-color);
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    background-color: $color-primary-light-9;
+    border-color: $color-primary-light-7;
+  }
+  &:active {
+    color: mix($color-black, $color-primary, $button-active-shade-percent);
+    border-color: mix(
+      $color-black,
+      $color-primary,
+      $button-active-shade-percent
+    );
+    outline: none;
+  }
+
+  &::-moz-focus-inner {
+    border: 0;
+  }
+
+  // size
+  @include m(large) {
+    @include button-size(
+      $button-large-padding-vertical,
+      $button-large-padding-horizontal,
+      $button-large-font-size,
+      $button-default-border-radius
+    );
+  }
+  @include m(small) {
+    @include button-size(
+      $button-small-padding-vertical,
+      $button-small-padding-horizontal,
+      $button-small-font-size,
+      $button-small-border-radius
+    );
+  }
+
+  // type
+  @include m(primary) {
+    @include button-variant(
+      $button-primary-font-color,
+      $button-primary-background-color,
+      $button-primary-border-color
+    );
+    @include button-shadow($button-primary-border-color);
+  }
+  @include m(success) {
+    @include button-variant(
+      $button-success-font-color,
+      $button-success-background-color,
+      $button-success-border-color
+    );
+    @include button-shadow($button-success-border-color);
+  }
+  @include m(warning) {
+    @include button-variant(
+      $button-warning-font-color,
+      $button-warning-background-color,
+      $button-warning-border-color
+    );
+    @include button-shadow($button-warning-border-color);
+  }
+  @include m(danger) {
+    @include button-variant(
+      $button-danger-font-color,
+      $button-danger-background-color,
+      $button-danger-border-color
+    );
+    @include button-shadow($button-danger-border-color);
+  }
+  @include m(info) {
+    @include button-variant(
+      $button-info-font-color,
+      $button-info-background-color,
+      $button-info-border-color
+    );
+    @include button-shadow($button-info-border-color);
+  }
+}

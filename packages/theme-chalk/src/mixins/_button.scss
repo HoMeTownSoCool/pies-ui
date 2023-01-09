@@ -1,0 +1,62 @@
+@use "../common/var" as *;
+
+// padding上下间距、字号、圆角
+@mixin button-size(
+  $padding-vertical,
+  $padding-horizontal,
+  $font-size,
+  $border-radius
+) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  border-radius: $border-radius;
+  &.is-round {
+    padding: $padding-horizontal $padding-vertical;
+  }
+}
+
+@mixin button-shadow($color) {
+  box-shadow: 0 2px 0 mix($color, transparent, $button-shadow-tint-percent);
+}
+
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+
+  &:hover,
+  &:focus {
+    color: $color;
+    background-color: mix(
+      $color-white,
+      $background-color,
+      $button-hover-tint-percent
+    );
+    border-color: mix($color-white, $border-color, $button-hover-tint-percent);
+  }
+
+  &:active {
+    color: $color;
+    background-color: mix(
+      $color-white,
+      $background-color,
+      $button-active-shade-percent
+    );
+    border-color: mix(
+      $color-white,
+      $border-color,
+      $button-active-shade-percent
+    );
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      color: $color-white;
+      background-color: mix($background-color, $color);
+      border-color: mix($border-color, $color-white);
+    }
+  }
+}
