@@ -31,6 +31,17 @@
   );
   @include button-shadow($button-default-border-color);
   @include button-secondary($button-default-background-color);
+  @include when(disabled) {
+    &,
+    &:hover,
+    &:focus {
+      color: $button-disabled-font-color;
+      background-color: $color-white;
+      border-color: $button-disabled-border-color;
+      cursor: not-allowed;
+    }
+  }
+
   &:hover {
     color: $color-primary;
     background-color: $color-primary-light-9;
@@ -109,4 +120,33 @@
     );
     @include button-secondary($button-info-background-color);
   }
+
+  // strong
+  @include when(strong) {
+    font-weight: $button-strong-font-weight;
+  }
+
+  // ghost
+  @include when(ghost) {
+    background-color: $color-transparent;
+  }
+
+  // circle
+  @include when(circle) {
+    padding: $button-padding-vertical;
+    border-radius: 50%;
+  }
+
+  @include when(dashed) {
+    border-style: $button-dashed-border-style;
+  }
+
+  @include when(block) {
+    width: $button-block-width;
+    display: block;
+  }
+
+  // @include when(text) {
+  //   @include button-text($button-default-font-color);
+  // }
 }

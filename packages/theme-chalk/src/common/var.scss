@@ -30,6 +30,10 @@ $color-info-light: mix($color-white, $color-info, 80%) !default;
 
 $color-text-primary: #303133 !default;
 $color-text-regular: #606266 !default;
+$color-text-secondary: #909399 !default;
+$color-text-placeholder: #c0c4cc !default;
+
+$border-color-lighter: #ebeef5 !default;
 
 /** Border
 -----------------
@@ -43,7 +47,7 @@ $border-radius-base: 4px !default;
 /** Typography
 -----------------
 */
-$font-weight-primary: 500 !default;
+$font-weight-primary: 400 !default;
 $font-weight-secondary: 100 !default;
 $font-size-base: 14px !default;
 $font-size-small: 13px !default;
@@ -63,11 +67,16 @@ $button-default-font-weight: $font-weight-primary !default;
 $button-default-border-radius: $border-radius-base !default;
 $button-default-padding-vertical: 9px !default;
 $button-default-padding-horizontal: 17px !default;
+$button-padding-vertical: 12px !default;
+
+$button-disabled-font-color: $color-text-placeholder !default;
+$button-disabled-border-color: $border-color-lighter !default;
+$button-disabled-tint-percent: 50% !default;
 
 $button-large-font-size: 16px !default;
 $button-large-border-radius: #{$border-radius-base + 2} !default;
 $button-large-padding-vertical: 11px !default;
-$button-large-padding-horizontal: 19px !default;
+$button-large-padding-horizontal: 23px !default;
 
 $button-small-font-size: 12px !default;
 $button-small-border-radius: #{$border-radius-base - 1} !default;
@@ -89,6 +98,10 @@ $button-danger-border-color: $color-danger !default;
 $button-info-font-color: $color-white !default;
 $button-info-background-color: $color-info !default;
 $button-info-border-color: $color-info !default;
+
+$button-strong-font-weight: 500 !default;
+$button-dashed-border-style: dashed !default;
+$button-block-width: 100%;
 
 $button-secondary-shade-percent: 90% !default;
 $button-secondary-hover-tint-percent: 5% !default;

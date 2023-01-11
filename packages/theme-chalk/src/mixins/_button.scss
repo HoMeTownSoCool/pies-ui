@@ -57,8 +57,18 @@
     &:focus,
     &:active {
       color: $color-white;
-      background-color: mix($background-color, $color);
-      border-color: mix($border-color, $color-white);
+      background-color: mix(
+        $background-color,
+        $color-white,
+        $button-disabled-tint-percent
+      );
+      border-color: mix(
+        $border-color,
+        $color-white,
+        $button-disabled-tint-percent
+      );
+      cursor: not-allowed;
+      box-shadow: none;
     }
   }
 }
@@ -105,5 +115,47 @@
       border-color: $a-color;
       color: $secondary-font-color;
     }
+
+    &.is-disabled {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        color: mix(
+          $secondary-font-color,
+          $color-white,
+          $button-disabled-tint-percent
+        );
+        background-color: mix(
+          $secondary-background-color,
+          $color-white,
+          $button-disabled-tint-percent
+        );
+        border-color: mix(
+          $secondary-border-color,
+          $color-white,
+          $button-disabled-tint-percent
+        );
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+    }
   }
 }
+
+// @mixin button-text($text-color) {
+//   @include when(text) {
+//     color: $text-color;
+//     padding-left: 0;
+//     padding-right: 0;
+//     border: none;
+//     background-color: $color-transparent;
+//     box-shadow: none;
+//     &:hover,
+//     &:active,
+//     &:focus {
+//       // background-color: none;
+//       background-color: $color-transparent;
+//     }
+//   }
+// }
