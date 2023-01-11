@@ -1,4 +1,5 @@
 @use "../common/var" as *;
+@use "../mixins/mixins.scss" as *;
 
 // padding上下间距、字号、圆角
 @mixin button-size(
@@ -16,14 +17,15 @@
 }
 
 @mixin button-shadow($color) {
-  box-shadow: 0 2px 0 mix($color, transparent, $button-shadow-tint-percent);
+  box-shadow: 0 2px 0
+    mix($color, $color-transparent, $button-shadow-tint-percent);
 }
 
 @mixin button-variant($color, $background-color, $border-color) {
   color: $color;
   background-color: $background-color;
   border-color: $border-color;
-
+  @include button-shadow($border-color);
   &:hover,
   &:focus {
     color: $color;
@@ -57,6 +59,51 @@
       color: $color-white;
       background-color: mix($background-color, $color);
       border-color: mix($border-color, $color-white);
+    }
+  }
+}
+
+@mixin button-secondary($background-color) {
+  @include when(secondary) {
+    box-shadow: none;
+    $secondary-font-color: $background-color;
+    $secondary-background-color: mix(
+      $color-white,
+      $background-color,
+      $button-secondary-shade-percent
+    );
+    @if ($background-color == $button-default-background-color) {
+      $secondary-font-color: $button-default-font-color;
+      $secondary-background-color: mix(
+        $color-white,
+        $color-grey,
+        $button-secondary-shade-percent
+      );
+    }
+    $secondary-border-color: $secondary-background-color;
+    color: $secondary-font-color;
+    background-color: $secondary-background-color;
+    border-color: $secondary-border-color;
+    &:hover,
+    &:focus {
+      $h-f-color: mix(
+        $secondary-font-color,
+        $secondary-background-color,
+        $button-secondary-hover-tint-percent
+      );
+      background-color: $h-f-color;
+      border-color: $h-f-color;
+      color: $secondary-font-color;
+    }
+    &:active {
+      $a-color: mix(
+        $secondary-font-color,
+        $secondary-background-color,
+        $button-secondary-active-shade-percent
+      );
+      background-color: $a-color;
+      border-color: $a-color;
+      color: $secondary-font-color;
     }
   }
 }

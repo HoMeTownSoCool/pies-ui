@@ -2,6 +2,8 @@
 -----------------
 */
 
+$color-transparent: transparent;
+
 $color-primary: #1643df !default;
 $color-success: #18a058 !default;
 $color-warning: #f0a020 !default;
@@ -10,6 +12,7 @@ $color-info: #8c8c8c !default;
 
 $color-white: #fff;
 $color-black: #000;
+$color-grey: #808080;
 $color-primary-light-1: mix($color-white, $color-primary, 10%) !default;
 $color-primary-light-2: mix($color-white, $color-primary, 20%) !default;
 $color-primary-light-3: mix($color-white, $color-primary, 30%) !default;
@@ -67,7 +70,7 @@ $button-large-padding-vertical: 11px !default;
 $button-large-padding-horizontal: 19px !default;
 
 $button-small-font-size: 12px !default;
-$button-small-border-radius: #{$border-radius-base - 2} !default;
+$button-small-border-radius: #{$border-radius-base - 1} !default;
 $button-small-padding-vertical: 7px !default;
 $button-small-padding-horizontal: 15px !default;
 
@@ -87,6 +90,10 @@ $button-info-font-color: $color-white !default;
 $button-info-background-color: $color-info !default;
 $button-info-border-color: $color-info !default;
 
+$button-secondary-shade-percent: 90% !default;
+$button-secondary-hover-tint-percent: 5% !default;
+$button-secondary-active-shade-percent: 10% !default;
+
 $button-hover-tint-percent: 20% !default;
 $button-active-shade-percent: 10% !default;
-$button-shadow-tint-percent: 5% !default;
+$button-shadow-tint-percent: 7% !default;

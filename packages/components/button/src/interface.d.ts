@@ -7,10 +7,8 @@ export type ButtonType =
   | "success"
   | "info"
   | "warning"
-  | "error";
+  | "danger";
 
-/** 按钮的权重 */
-export type ButtonWeight = "default" | "secondary" | "tertiary" | "quaternary";
 /** 按钮的大小 */
 export type ButtonSize = "small" | "default" | "large";
 

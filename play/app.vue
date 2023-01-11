@@ -21,6 +21,18 @@
         <pies-button type="info">info</pies-button>
       </div>
     </div>
+
+    <div>
+      <h2>次要按钮</h2>
+      <div>
+        <pies-button secondary>default</pies-button>
+        <pies-button secondary type="primary">default</pies-button>
+        <pies-button secondary type="success">default</pies-button>
+        <pies-button secondary type="warning">default</pies-button>
+        <pies-button secondary type="danger">default</pies-button>
+        <pies-button secondary type="info">default</pies-button>
+      </div>
+    </div>
   </div>
 </template>
 <script setup lang="ts"></script>

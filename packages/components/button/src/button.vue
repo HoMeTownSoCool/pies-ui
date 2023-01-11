@@ -28,14 +28,14 @@ const classList = computed(() => {
     strong,
     ghost,
     disabled,
-    weight,
+    secondary,
   } = props;
   return [
     "pies-button",
     {
       [`pies-button--${type}`]: type,
       [`pies-button--${size}`]: size,
-      [`pies-button--${weight}`]: weight,
+      [`is-secondary`]: secondary,
       [`is-disabled`]: disabled,
       [`is-ghost`]: ghost,
       [`is-strong`]: strong,

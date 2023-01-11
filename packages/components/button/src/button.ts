@@ -1,7 +1,6 @@
 import { ExtractPropTypes, PropType } from "vue";
 import type {
   ButtonType,
-  ButtonWeight,
   ButtonSize,
   ButtonIconPlacement,
   ButtonNativeType,
@@ -14,17 +13,7 @@ export const Props = {
     default: (): undefined => undefined,
     validator(value: ButtonType) {
       return (
-        ["default", "primary", "success", "info", "warning", "error"] as const
-      ).includes(value);
-    },
-  },
-  /** 按钮的权重 */
-  weight: {
-    type: String as PropType<ButtonWeight>,
-    default: (): undefined => undefined,
-    validator(value: ButtonWeight) {
-      return (
-        ["default", "secondary", "tertiary", "quaternary"] as const
+        ["default", "primary", "success", "info", "warning", "danger"] as const
       ).includes(value);
     },
   },
@@ -35,6 +24,11 @@ export const Props = {
     validator(value: ButtonSize) {
       return (["small", "default", "large"] as const).includes(value);
     },
+  },
+  /** 是否为次要按钮 */
+  secondary: {
+    type: Boolean,
+    default: (): Boolean => false,
   },
   /** 是否为虚线按钮 */
   dashed: {

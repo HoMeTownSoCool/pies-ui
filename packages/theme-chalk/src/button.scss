@@ -30,6 +30,7 @@
     $button-default-border-radius
   );
   @include button-shadow($button-default-border-color);
+  @include button-secondary($button-default-background-color);
   &:hover {
     color: $color-primary;
     background-color: $color-primary-light-9;
@@ -74,7 +75,7 @@
       $button-primary-background-color,
       $button-primary-border-color
     );
-    @include button-shadow($button-primary-border-color);
+    @include button-secondary($button-primary-background-color);
   }
   @include m(success) {
     @include button-variant(
@@ -82,7 +83,7 @@
       $button-success-background-color,
       $button-success-border-color
     );
-    @include button-shadow($button-success-border-color);
+    @include button-secondary($button-success-background-color);
   }
   @include m(warning) {
     @include button-variant(
@@ -90,7 +91,7 @@
       $button-warning-background-color,
       $button-warning-border-color
     );
-    @include button-shadow($button-warning-border-color);
+    @include button-secondary($button-warning-background-color);
   }
   @include m(danger) {
     @include button-variant(
@@ -98,7 +99,7 @@
       $button-danger-background-color,
       $button-danger-border-color
     );
-    @include button-shadow($button-danger-border-color);
+    @include button-secondary($button-danger-background-color);
   }
   @include m(info) {
     @include button-variant(
@@ -106,6 +107,6 @@
       $button-info-background-color,
       $button-info-border-color
     );
-    @include button-shadow($button-info-border-color);
+    @include button-secondary($button-info-background-color);
   }
 }
