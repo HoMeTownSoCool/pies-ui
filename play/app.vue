@@ -21,9 +21,7 @@
         <pies-button type="info">info</pies-button>
         <pies-button dashed>虚线按钮</pies-button>
         <pies-button circle>+</pies-button>
-        <pies-button type="text" href="https://juejin.cn/user/4116184668057390"
-          >Link HoMeTown</pies-button
-        >
+        <pies-button type="text" href="https://juejin.cn/user/4116184668057390">Link HoMeTown</pies-button>
       </div>
       <br />
       <div>
@@ -35,12 +33,7 @@
         <pies-button disabled type="info">info</pies-button>
         <pies-button disabled dashed>虚线按钮</pies-button>
         <pies-button disabled circle>+</pies-button>
-        <pies-button
-          disabled
-          type="text"
-          href="https://juejin.cn/user/4116184668057390"
-          >Link HoMeTown</pies-button
-        >
+        <pies-button disabled type="text" href="https://juejin.cn/user/4116184668057390">Link HoMeTown</pies-button>
       </div>
     </div>
 

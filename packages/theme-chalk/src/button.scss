@@ -1,7 +1,7 @@
-@use "common/var" as *;
-@use "mixins/button" as *;
-@use "mixins/mixins" as *;
-@use "mixins/utils" as *;
+@use 'common/var' as *;
+@use 'mixins/button' as *;
+@use 'mixins/mixins' as *;
+@use 'mixins/utils' as *;
 
 @include b(button) {
   display: inline-block;
@@ -20,6 +20,7 @@
   transition: 0.1s;
   appearance: none;
   @include utils-user-select(none);
+
   & + & {
     margin-left: 10px;
   }
@@ -36,9 +37,9 @@
     &:hover,
     &:focus {
       color: $button-disabled-font-color;
+      cursor: not-allowed;
       background-color: $color-white;
       border-color: $button-disabled-border-color;
-      cursor: not-allowed;
     }
   }
 
@@ -47,13 +48,10 @@
     background-color: $color-primary-light-9;
     border-color: $color-primary-light-7;
   }
+
   &:active {
     color: mix($color-black, $color-primary, $button-active-shade-percent);
-    border-color: mix(
-      $color-black,
-      $color-primary,
-      $button-active-shade-percent
-    );
+    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
     outline: none;
   }
 
@@ -81,45 +79,26 @@
 
   // type
   @include m(primary) {
-    @include button-variant(
-      $button-primary-font-color,
-      $button-primary-background-color,
-      $button-primary-border-color
-    );
+    @include button-variant($button-primary-font-color, $button-primary-background-color, $button-primary-border-color);
     @include button-secondary($button-primary-background-color);
   }
   @include m(success) {
-    @include button-variant(
-      $button-success-font-color,
-      $button-success-background-color,
-      $button-success-border-color
-    );
+    @include button-variant($button-success-font-color, $button-success-background-color, $button-success-border-color);
     @include button-secondary($button-success-background-color);
   }
   @include m(warning) {
-    @include button-variant(
-      $button-warning-font-color,
-      $button-warning-background-color,
-      $button-warning-border-color
-    );
+    @include button-variant($button-warning-font-color, $button-warning-background-color, $button-warning-border-color);
     @include button-secondary($button-warning-background-color);
   }
   @include m(danger) {
-    @include button-variant(
-      $button-danger-font-color,
-      $button-danger-background-color,
-      $button-danger-border-color
-    );
+    @include button-variant($button-danger-font-color, $button-danger-background-color, $button-danger-border-color);
     @include button-secondary($button-danger-background-color);
   }
   @include m(info) {
-    @include button-variant(
-      $button-info-font-color,
-      $button-info-background-color,
-      $button-info-border-color
-    );
+    @include button-variant($button-info-font-color, $button-info-background-color, $button-info-border-color);
     @include button-secondary($button-info-background-color);
   }
+
   /* text */
   @include m(text) {
     padding-right: 0;
@@ -169,7 +148,7 @@
   }
 
   @include when(block) {
-    width: $button-block-width;
     display: block;
+    width: $button-block-width;
   }
 }

@@ -1,8 +1,6 @@
 // 禁止复制
 @mixin utils-user-select($value) {
-  -moz-user-select: $value;
-  -webkit-user-select: $value;
-  -ms-user-select: $value;
+  user-select: $value;
 }
 @mixin utils-clearfix {
   $selector: &;
@@ -10,7 +8,7 @@
     #{$selector}::before,
     #{$selector}::after {
       display: table;
-      content: "";
+      content: '';
     }
     #{$selector}::after {
       clear: both;

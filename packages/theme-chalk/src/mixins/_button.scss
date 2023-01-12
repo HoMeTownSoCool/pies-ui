@@ -1,24 +1,19 @@
-@use "../common/var" as *;
-@use "../mixins/mixins.scss" as *;
+@use '../common/var' as *;
+@use '../mixins/mixins.scss' as *;
 
 // padding上下间距、字号、圆角
-@mixin button-size(
-  $padding-vertical,
-  $padding-horizontal,
-  $font-size,
-  $border-radius
-) {
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   border-radius: $border-radius;
+
   &.is-round {
     padding: $padding-horizontal $padding-vertical;
   }
 }
 
 @mixin button-shadow($color) {
-  box-shadow: 0 2px 0
-    mix($color, $color-transparent, $button-shadow-tint-percent);
+  box-shadow: 0 2px 0 mix($color, $color-transparent, $button-shadow-tint-percent);
 }
 
 @mixin button-variant($color, $background-color, $border-color) {
@@ -26,29 +21,18 @@
   background-color: $background-color;
   border-color: $border-color;
   @include button-shadow($border-color);
+
   &:hover,
   &:focus {
     color: $color;
-    background-color: mix(
-      $color-white,
-      $background-color,
-      $button-hover-tint-percent
-    );
+    background-color: mix($color-white, $background-color, $button-hover-tint-percent);
     border-color: mix($color-white, $border-color, $button-hover-tint-percent);
   }
 
   &:active {
     color: $color;
-    background-color: mix(
-      $color-white,
-      $background-color,
-      $button-active-shade-percent
-    );
-    border-color: mix(
-      $color-white,
-      $border-color,
-      $button-active-shade-percent
-    );
+    background-color: mix($color-white, $background-color, $button-active-shade-percent);
+    border-color: mix($color-white, $border-color, $button-active-shade-percent);
   }
 
   &.is-disabled {
@@ -57,17 +41,9 @@
     &:focus,
     &:active {
       color: $color-white;
-      background-color: mix(
-        $background-color,
-        $color-white,
-        $button-disabled-tint-percent
-      );
-      border-color: mix(
-        $border-color,
-        $color-white,
-        $button-disabled-tint-percent
-      );
       cursor: not-allowed;
+      background-color: mix($background-color, $color-white, $button-disabled-tint-percent);
+      border-color: mix($border-color, $color-white, $button-disabled-tint-percent);
       box-shadow: none;
     }
   }
@@ -75,45 +51,33 @@
 
 @mixin button-secondary($background-color) {
   @include when(secondary) {
-    box-shadow: none;
-    $secondary-font-color: $background-color;
-    $secondary-background-color: mix(
-      $color-white,
-      $background-color,
-      $button-secondary-shade-percent
-    );
-    @if ($background-color == $button-default-background-color) {
-      $secondary-font-color: $button-default-font-color;
-      $secondary-background-color: mix(
-        $color-white,
-        $color-grey,
-        $button-secondary-shade-percent
-      );
-    }
-    $secondary-border-color: $secondary-background-color;
     color: $secondary-font-color;
     background-color: $secondary-background-color;
     border-color: $secondary-border-color;
+    box-shadow: none;
+    $secondary-font-color: $background-color;
+    $secondary-background-color: mix($color-white, $background-color, $button-secondary-shade-percent);
+    $secondary-border-color: $secondary-background-color;
+    @if ($background-color == $button-default-background-color) {
+      $secondary-font-color: $button-default-font-color;
+      $secondary-background-color: mix($color-white, $color-grey, $button-secondary-shade-percent);
+    }
+
     &:hover,
     &:focus {
-      $h-f-color: mix(
-        $secondary-font-color,
-        $secondary-background-color,
-        $button-secondary-hover-tint-percent
-      );
+      $h-f-color: mix($secondary-font-color, $secondary-background-color, $button-secondary-hover-tint-percent);
+
+      color: $secondary-font-color;
       background-color: $h-f-color;
       border-color: $h-f-color;
-      color: $secondary-font-color;
     }
+
     &:active {
-      $a-color: mix(
-        $secondary-font-color,
-        $secondary-background-color,
-        $button-secondary-active-shade-percent
-      );
+      $a-color: mix($secondary-font-color, $secondary-background-color, $button-secondary-active-shade-percent);
+
+      color: $secondary-font-color;
       background-color: $a-color;
       border-color: $a-color;
-      color: $secondary-font-color;
     }
 
     &.is-disabled {
@@ -121,22 +85,10 @@
       &:hover,
       &:focus,
       &:active {
-        color: mix(
-          $secondary-font-color,
-          $color-white,
-          $button-disabled-tint-percent
-        );
-        background-color: mix(
-          $secondary-background-color,
-          $color-white,
-          $button-disabled-tint-percent
-        );
-        border-color: mix(
-          $secondary-border-color,
-          $color-white,
-          $button-disabled-tint-percent
-        );
+        color: mix($secondary-font-color, $color-white, $button-disabled-tint-percent);
         cursor: not-allowed;
+        background-color: mix($secondary-background-color, $color-white, $button-disabled-tint-percent);
+        border-color: mix($secondary-border-color, $color-white, $button-disabled-tint-percent);
         box-shadow: none;
       }
     }

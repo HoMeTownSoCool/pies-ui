@@ -3,7 +3,5 @@
   "main": "index.ts",
   "author": "HoMeTown <hometownsocool@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "@pies-ui/utils": "workspace:*"
-  }
+  "dependencies": {}
 }

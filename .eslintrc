@@ -1,0 +1,4 @@
+{
+  "root": true,
+  "extends": ["@pies-ui/eslint-config"]
+}
