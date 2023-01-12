@@ -15,7 +15,8 @@
     "lint:css": "stylelint 'packages/theme-chalk/src/**/*.scss' --fix --custom-syntax postcss-scss",
     "lint:ls": "ls-lint",
     "lint:staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,11 @@
     "url": "https://github.com/HoMeTownSoCool/pies-ui/issues"
   },
   "homepage": "https://github.com/HoMeTownSoCool/pies-ui#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/git-cz"
+    }
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
@@ -44,11 +50,11 @@
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
     "commitizen": "^4.2.5",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.7.0",
+    "git-cz": "^4.9.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "postcss-scss": "^4.0.6",

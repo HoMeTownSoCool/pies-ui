@@ -19,6 +19,7 @@ importers:
       eslint-config-prettier: ^8.6.0
       eslint-plugin-prettier: ^4.2.1
       eslint-plugin-vue: ^9.7.0
+      git-cz: ^4.9.0
       husky: ^8.0.2
       lint-staged: ^13.1.0
       postcss-scss: ^4.0.6
@@ -49,6 +50,7 @@ importers:
       eslint-config-prettier: registry.npmmirror.com/eslint-config-prettier/8.6.0_eslint@8.31.0
       eslint-plugin-prettier: registry.npmmirror.com/eslint-plugin-prettier/4.2.1_453b2fb55e1dbeedcc09216c5440ac31
       eslint-plugin-vue: registry.npmmirror.com/eslint-plugin-vue/9.8.0_eslint@8.31.0
+      git-cz: registry.npmmirror.com/git-cz/4.9.0
       husky: registry.npmmirror.com/husky/8.0.3
       lint-staged: registry.npmmirror.com/lint-staged/13.1.0
       postcss-scss: registry.npmmirror.com/postcss-scss/4.0.6
@@ -2320,6 +2322,13 @@ packages:
     name: get-stream
     version: 6.0.1
     engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/git-cz/4.9.0:
+    resolution: {integrity: sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/git-cz/-/git-cz-4.9.0.tgz}
+    name: git-cz
+    version: 4.9.0
+    hasBin: true
     dev: true
 
   registry.npmmirror.com/git-raw-commits/2.0.11:
