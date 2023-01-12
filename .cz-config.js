@@ -1,3 +1,10 @@
+/**
+ * Visual Studio Code Commitizen Support
+ * step1: vscode插件：Visual Studio Code Commitizen Support
+ * step2: command + shift + p 输入 conventional commit
+ * step3: 根目录下创建自定义配置文件 .cz-config.js
+ * step4: 重启 VSCode 才会生效
+ */
 module.exports = {
   // type 类型
   types: [

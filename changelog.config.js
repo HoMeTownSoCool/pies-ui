@@ -11,23 +11,23 @@ module.exports = {
   scopes: [],
   types: {
     chore: {
-      description: '一些与主要业务无关的构建/工程依赖/工具等功能改动',
+      description: '对构建过程或辅助工具和库的更改,不影响源文件、测试用例的其他操作',
       emoji: '🤖',
       value: 'chore'
     },
     ci: {
-      description: 'CI related changes',
+      description: '修改了 CI 配置、脚本',
       emoji: '🎡',
       value: 'ci'
     },
     docs: {
       description: '文档更新(如：README)',
-      emoji: '✏️',
+      emoji: '📝',
       value: 'docs'
     },
     feat: {
       description: '新的特性',
-      emoji: '🎸',
+      emoji: '✨',
       value: 'feat'
     },
     fix: {
@@ -56,7 +56,7 @@ module.exports = {
       value: 'style'
     },
     test: {
-      description: '新增或修改已有的测试代码',
+      description: '添加、修改测试用例',
       emoji: '💍',
       value: 'test'
     }
