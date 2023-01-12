@@ -4,6 +4,7 @@ import type {
   ButtonSize,
   ButtonIconPlacement,
   ButtonNativeType,
+  ButtonHrefTarget,
 } from "./interface";
 
 export const Props = {
@@ -13,7 +14,15 @@ export const Props = {
     default: (): undefined => undefined,
     validator(value: ButtonType) {
       return (
-        ["default", "primary", "success", "info", "warning", "danger"] as const
+        [
+          "default",
+          "primary",
+          "success",
+          "info",
+          "warning",
+          "danger",
+          "text",
+        ] as const
       ).includes(value);
     },
   },
@@ -30,13 +39,18 @@ export const Props = {
     type: Boolean,
     default: (): Boolean => false,
   },
+  /** 点击跳转的地址，指定此属性 button 的行为和 a 链接一致 */
+  href: {
+    type: String,
+    default: (): String => "",
+  },
+  /** 相当于 a 链接的 target 属性，href 存在时生效	 */
+  target: {
+    type: String as PropType<ButtonHrefTarget>,
+    default: (): String => "",
+  },
   /** 是否为虚线按钮 */
   dashed: {
-    type: Boolean,
-    default: (): Boolean => false,
-  },
-  /** 是否为文本按钮 */
-  text: {
     type: Boolean,
     default: (): Boolean => false,
   },

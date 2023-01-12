@@ -1,6 +1,7 @@
 <template>
   <button
     :class="classList"
+    :style="styleList"
     :type="nativeType"
     :autofocus="autofocus"
     :disabled="disabled || loading"
@@ -21,7 +22,6 @@ const classList = computed(() => {
     type,
     size,
     dashed,
-    text,
     loading,
     block,
     circle,
@@ -43,12 +43,24 @@ const classList = computed(() => {
       [`is-block`]: block,
       [`is-dashed`]: dashed,
       [`is-loading`]: loading,
-      [`is-text`]: text,
     },
   ];
 });
 
+const styleList = computed(() => {
+  const { textColor } = props;
+  return {
+    color: textColor,
+  };
+});
+
+function handleHref() {
+  props.href ? window.open(props.href, props.target) : null;
+  return;
+}
+
 function handleClick(evt: MouseEvent): void {
+  handleHref();
   emits("click", evt);
 }
 </script>

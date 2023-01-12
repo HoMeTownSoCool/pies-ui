@@ -120,6 +120,33 @@
     );
     @include button-secondary($button-info-background-color);
   }
+  /* text */
+  @include m(text) {
+    padding-right: 0;
+    padding-left: 0;
+    color: $color-primary;
+    background: transparent;
+    border-color: transparent;
+
+    &:hover,
+    &:focus {
+      color: mix($color-white, $color-primary, $button-hover-tint-percent);
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &:active {
+      color: mix($color-black, $color-primary, $button-active-shade-percent);
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.is-disabled,
+    &.is-disabled:hover,
+    &.is-disabled:focus {
+      border-color: transparent;
+    }
+  }
 
   // strong
   @include when(strong) {
@@ -145,8 +172,4 @@
     width: $button-block-width;
     display: block;
   }
-
-  // @include when(text) {
-  //   @include button-text($button-default-font-color);
-  // }
 }
