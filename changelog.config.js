@@ -57,7 +57,7 @@ module.exports = {
     },
     test: {
       description: '添加、修改测试用例',
-      emoji: '💍',
+      emoji: '✅',
       value: 'test'
     }
   }
