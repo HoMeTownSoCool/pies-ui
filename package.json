@@ -1,7 +1,7 @@
 {
   "name": "pies-ui",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "A Vue 3 Component Library.Uses TypeScript.",
   "main": "index.js",
   "scripts": {
@@ -17,8 +17,9 @@
     "lint:staged": "lint-staged",
     "prepare": "husky install",
     "commit": "git-cz",
-    "prerelease": "standard-version --release-as patch --dry-run",
-    "release": "standard-version --release-as patch"
+    "release": "standard-version --release-as patch",
+    "release:dry": "standard-version --release-as patch --dry-run",
+    "release:publish": "git push --follow-tags origin main"
   },
   "repository": {
     "type": "git",

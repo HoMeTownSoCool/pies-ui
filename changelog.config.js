@@ -12,52 +12,52 @@ module.exports = {
   types: {
     chore: {
       description: '对构建过程或辅助工具和库的更改,不影响源文件、测试用例的其他操作',
-      emoji: '🤖',
+      emoji: '',
       value: 'chore'
     },
     ci: {
       description: '修改了 CI 配置、脚本',
-      emoji: '🎡',
+      emoji: '',
       value: 'ci'
     },
     docs: {
       description: '文档更新(如：README)',
-      emoji: '📝',
+      emoji: '',
       value: 'docs'
     },
     feat: {
       description: '新的特性',
-      emoji: '✨',
+      emoji: '',
       value: 'feat'
     },
     fix: {
       description: 'bug 修复',
-      emoji: '🐛',
+      emoji: '',
       value: 'fix'
     },
     perf: {
       description: '优化了性能的代码改动',
-      emoji: '⚡️',
+      emoji: '',
       value: 'perf'
     },
     refactor: {
       description: '一些代码结构上优化，既不是新特性也不是修 Bug',
-      emoji: '💡',
+      emoji: '',
       value: 'refactor'
     },
     release: {
       description: 'Create a release commit',
-      emoji: '🏹',
+      emoji: '',
       value: 'release'
     },
     style: {
       description: '代码的样式美化，不涉及到功能修改等',
-      emoji: '💄',
+      emoji: '',
       value: 'style'
     },
     test: {
       description: '添加、修改测试用例',
-      emoji: '✅',
+      emoji: '',
       value: 'test'
     }
   }
