@@ -121,7 +121,7 @@
     &.is-disabled,
     &.is-disabled:hover,
     &.is-disabled:focus {
-      border-color: transparent;
+      border-color: transparent !important;
     }
   }
 

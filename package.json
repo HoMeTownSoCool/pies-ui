@@ -77,8 +77,9 @@
   "dependencies": {
     "@pies-ui/components": "workspace:*",
     "@pies-ui/eslint-config": "workspace:^0.0.1",
+    "@pies-ui/hooks": "workspace:*",
     "@pies-ui/theme-chalk": "workspace:*",
-    "@pies-ui/utils": "workspace:^1.0.0",
-    "@pies-ui/hooks": "workspace:*"
+    "@pies-ui/tokens": "workspace:^1.0.0",
+    "@pies-ui/utils": "workspace:^1.0.0"
   }
 }

@@ -116,3 +116,4 @@ export const Emits = {
 };
 
 export type ButtonProps = ExtractPropTypes<typeof Props>;
+export type ButtonEmits = typeof Emits;

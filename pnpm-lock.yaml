@@ -12,6 +12,7 @@ importers:
       '@pies-ui/eslint-config': workspace:^0.0.1
       '@pies-ui/hooks': workspace:*
       '@pies-ui/theme-chalk': workspace:*
+      '@pies-ui/tokens': workspace:^1.0.0
       '@pies-ui/utils': workspace:^1.0.0
       '@typescript-eslint/eslint-plugin': ^5.42.0
       '@typescript-eslint/parser': ^5.42.0
@@ -40,6 +41,7 @@ importers:
       '@pies-ui/eslint-config': link:packages/eslint-config
       '@pies-ui/hooks': link:packages/hooks
       '@pies-ui/theme-chalk': link:packages/theme-chalk
+      '@pies-ui/tokens': link:packages/tokens
       '@pies-ui/utils': link:packages/utils
     devDependencies:
       '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.4.1

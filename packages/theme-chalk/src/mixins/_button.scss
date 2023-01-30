@@ -63,6 +63,7 @@
     @if ($background-color == $button-default-background-color) {
       $secondary-font-color: $button-default-font-color;
       $secondary-background-color: mix($color-white, $color-grey, $button-secondary-shade-percent);
+      $secondary-border-color: $secondary-background-color;
     }
 
     color: $secondary-font-color;

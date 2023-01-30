@@ -1,0 +1,7 @@
+{
+  "name": "@pies-ui/tokens",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "author": "HoMeTown <hometownsocool@gmail.com>",
+  "license": "MIT"
+}
