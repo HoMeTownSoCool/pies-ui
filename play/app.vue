@@ -20,7 +20,10 @@
         <pies-button type="danger">danger</pies-button>
         <pies-button type="info">info</pies-button>
         <pies-button dashed>虚线按钮</pies-button>
+        <pies-button round>圆角按钮</pies-button>
         <pies-button circle>+</pies-button>
+        <pies-button color="#f80" disabled>+</pies-button>
+        <pies-button secondary color="#f80">+</pies-button>
         <pies-button type="text" href="https://juejin.cn/user/4116184668057390">Link HoMeTown</pies-button>
       </div>
       <br />

@@ -6,14 +6,19 @@
   padding: $padding-vertical $padding-horizontal;
   font-size: $font-size;
   border-radius: $border-radius;
-
-  &.is-round {
-    padding: $padding-horizontal $padding-vertical;
-  }
 }
 
 @mixin button-shadow($color) {
   box-shadow: 0 2px 0 mix($color, $color-transparent, $button-shadow-tint-percent);
+}
+
+@mixin button-disabled($color, $bg, $border-color) {
+  color: $color !important;
+  cursor: not-allowed !important;
+  background-color: $bg !important;
+  border-color: $border-color !important;
+  transform: scale(1);
+  box-shadow: none !important;
 }
 
 @mixin button-variant($color, $background-color, $border-color) {
@@ -40,11 +45,11 @@
     &:hover,
     &:focus,
     &:active {
-      color: $color-white;
-      cursor: not-allowed;
-      background-color: mix($background-color, $color-white, $button-disabled-tint-percent);
-      border-color: mix($border-color, $color-white, $button-disabled-tint-percent);
-      box-shadow: none;
+      @include button-disabled(
+        $color-white,
+        mix($background-color, $color-white, $button-disabled-tint-percent),
+        mix($border-color, $color-white, $button-disabled-tint-percent)
+      );
     }
   }
 }
@@ -87,11 +92,11 @@
       &:hover,
       &:focus,
       &:active {
-        color: mix($secondary-font-color, $color-white, $button-disabled-tint-percent);
-        cursor: not-allowed;
-        background-color: mix($secondary-background-color, $color-white, $button-disabled-tint-percent);
-        border-color: mix($secondary-border-color, $color-white, $button-disabled-tint-percent);
-        box-shadow: none;
+        @include button-disabled(
+          mix($secondary-font-color, $color-white, $button-disabled-tint-percent),
+          mix($secondary-background-color, $color-white, $button-disabled-tint-percent),
+          mix($secondary-border-color, $color-white, $button-disabled-tint-percent)
+        );
       }
     }
   }

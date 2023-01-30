@@ -36,10 +36,7 @@
     &,
     &:hover,
     &:focus {
-      color: $button-disabled-font-color;
-      cursor: not-allowed;
-      background-color: $color-white;
-      border-color: $button-disabled-border-color;
+      @include button-disabled($button-disabled-font-color, $color-white, $button-disabled-border-color);
     }
   }
 
@@ -51,8 +48,9 @@
 
   &:active {
     color: mix($color-black, $color-primary, $button-active-shade-percent);
-    border-color: mix($color-black, $color-primary, $button-active-shade-percent);
+    // border-color: mix($color-black, $color-primary, $button-active-shade-percent);
     outline: none;
+    transform: scale($button-active-scale-percent);
   }
 
   &::-moz-focus-inner {
@@ -150,5 +148,9 @@
   @include when(block) {
     display: block;
     width: $button-block-width;
+  }
+
+  @include when(round) {
+    border-radius: $button-round-border-radius;
   }
 }

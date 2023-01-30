@@ -6,9 +6,11 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.2.0
       '@commitlint/config-conventional': ^17.2.0
+      '@ctrl/tinycolor': ^3.5.0
       '@ls-lint/ls-lint': ^1.11.2
       '@pies-ui/components': workspace:*
       '@pies-ui/eslint-config': workspace:^0.0.1
+      '@pies-ui/hooks': workspace:*
       '@pies-ui/theme-chalk': workspace:*
       '@pies-ui/utils': workspace:^1.0.0
       '@typescript-eslint/eslint-plugin': ^5.42.0
@@ -36,11 +38,13 @@ importers:
     dependencies:
       '@pies-ui/components': link:packages/components
       '@pies-ui/eslint-config': link:packages/eslint-config
+      '@pies-ui/hooks': link:packages/hooks
       '@pies-ui/theme-chalk': link:packages/theme-chalk
       '@pies-ui/utils': link:packages/utils
     devDependencies:
       '@commitlint/cli': registry.npmmirror.com/@commitlint/cli/17.4.1
       '@commitlint/config-conventional': registry.npmmirror.com/@commitlint/config-conventional/17.4.0
+      '@ctrl/tinycolor': registry.npmmirror.com/@ctrl/tinycolor/3.5.0
       '@ls-lint/ls-lint': registry.npmmirror.com/@ls-lint/ls-lint/1.11.2
       '@typescript-eslint/eslint-plugin': registry.npmmirror.com/@typescript-eslint/eslint-plugin/5.48.1_da5cdd7106ab600812e6b4eeaf354f91
       '@typescript-eslint/parser': registry.npmmirror.com/@typescript-eslint/parser/5.48.1_eslint@8.31.0+typescript@4.9.4
@@ -363,6 +367,13 @@ packages:
     dependencies:
       postcss: registry.npmmirror.com/postcss/8.4.21
       postcss-selector-parser: registry.npmmirror.com/postcss-selector-parser/6.0.11
+    dev: true
+
+  registry.npmmirror.com/@ctrl/tinycolor/3.5.0:
+    resolution: {integrity: sha512-tlJpwF40DEQcfR/QF+wNMVyGMaO9FQp6Z1Wahj4Gk3CJQYHwA2xVG7iKDFdW6zuxZY9XWOpGcfNCTsX4McOsOg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@ctrl/tinycolor/-/tinycolor-3.5.0.tgz}
+    name: '@ctrl/tinycolor'
+    version: 3.5.0
+    engines: {node: '>=10'}
     dev: true
 
   registry.npmmirror.com/@esbuild/android-arm/0.15.18:
