@@ -25,7 +25,7 @@ module.exports = {
   'vue/html-end-tags': 'error',
   /* 模板缩进规则 */
   'vue/html-indent': [
-    'error',
+    'off',
     2,
     {
       attribute: 1,
