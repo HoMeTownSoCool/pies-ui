@@ -1,0 +1,54 @@
+{
+  "guide": [
+    {
+      "title": "关于",
+      "items": [
+        {
+          "cname": "Pies UI",
+          "name": "",
+          "path": "/guide/piesui",
+          "label": "",
+          "type": "success"
+        }
+      ]
+    },
+    {
+      "title": "快速上手",
+      "items": [
+        {
+          "cname": "安装",
+          "name": "",
+          "path": "/guide/install",
+          "label": "",
+          "type": "success"
+        },
+        {
+          "cname": "如何使用",
+          "name": "",
+          "path": "/guide/start",
+          "label": "",
+          "type": "success"
+        },
+        {
+          "cname": "未来计划",
+          "name": "",
+          "path": "/guide/todo",
+          "label": "",
+          "type": ""
+        }
+      ]
+    },
+    {
+      "title": "版本",
+      "items": [
+        {
+          "cname": "更新日志",
+          "name": "",
+          "path": "/guide/log",
+          "label": "",
+          "type": "success"
+        }
+      ]
+    }
+  ]
+}

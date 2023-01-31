@@ -8,7 +8,8 @@ export default defineConfig({
     [
       't-p-c',
       {
-        color: '#515767'
+        color: '#515767',
+        'font-size': '14px'
       }
     ]
   ],
