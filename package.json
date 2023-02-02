@@ -77,10 +77,10 @@
     "vue": "^3.2.36"
   },
   "dependencies": {
-    "@pies-ui/components": "workspace:*",
-    "@pies-ui/eslint-config": "workspace:^0.0.1",
-    "@pies-ui/hooks": "workspace:*",
-    "@pies-ui/theme-chalk": "workspace:*",
+    "@pies-ui/components": "workspace:^1.0.0",
+    "@pies-ui/eslint-config": "workspace:^1.0.0",
+    "@pies-ui/hooks": "workspace:^1.0.0",
+    "@pies-ui/theme-chalk": "workspace:^1.0.0",
     "@pies-ui/tokens": "workspace:^1.0.0",
     "@pies-ui/utils": "workspace:^1.0.0"
   }

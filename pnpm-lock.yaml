@@ -8,10 +8,10 @@ importers:
       '@commitlint/config-conventional': ^17.2.0
       '@ctrl/tinycolor': ^3.5.0
       '@ls-lint/ls-lint': ^1.11.2
-      '@pies-ui/components': workspace:*
-      '@pies-ui/eslint-config': workspace:^0.0.1
-      '@pies-ui/hooks': workspace:*
-      '@pies-ui/theme-chalk': workspace:*
+      '@pies-ui/components': workspace:^1.0.0
+      '@pies-ui/eslint-config': workspace:^1.0.0
+      '@pies-ui/hooks': workspace:^1.0.0
+      '@pies-ui/theme-chalk': workspace:^1.0.0
       '@pies-ui/tokens': workspace:^1.0.0
       '@pies-ui/utils': workspace:^1.0.0
       '@typescript-eslint/eslint-plugin': ^5.42.0

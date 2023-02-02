@@ -1,5 +1,6 @@
 {
   "name": "@pies-ui/hooks",
+  "version": "1.0.0",
   "main": "index.ts",
   "author": "HoMeTown <hometownsocool@gmail.com>",
   "license": "MIT"
