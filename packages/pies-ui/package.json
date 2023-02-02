@@ -1,0 +1,28 @@
+{
+  "name": "pies-ui",
+  "version": "1.0.1",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "scripts": {
+    "build": "vite build"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "pies-ui",
+    "pies",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "HoMeTown",
+  "license": "MIT",
+  "description": "A Component Library for Vue 3",
+  "typings": "lib/index.d.ts"
+}

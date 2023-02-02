@@ -14,7 +14,7 @@ export default defineConfig({
     //cssCodeSplit: true,
     rollupOptions: {
       //忽略打包vue文件
-      external: ['vue', '/.scss/', '@pies-ui/utils'],
+      external: ['vue'],
       input: ['./index.ts'],
       output: [
         {
@@ -25,7 +25,7 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
           //配置打包根目录
-          dir: resolve(__dirname, '../../pies-ui/es')
+          dir: resolve(__dirname, '../pies-ui/es')
         },
         {
           format: 'cjs',
@@ -35,7 +35,7 @@ export default defineConfig({
           preserveModules: true,
           exports: 'named',
           //配置打包根目录
-          dir: resolve(__dirname, '../../pies-ui/lib')
+          dir: resolve(__dirname, '../pies-ui/lib')
         }
       ]
     },
@@ -49,7 +49,7 @@ export default defineConfig({
     vue(),
     dts({
       entryRoot: './',
-      outputDir: [resolve(__dirname, '../../pies-ui/es/types'), resolve(__dirname, '../../pies-ui/lib/types')],
+      outputDir: [resolve(__dirname, '../pies-ui/es/types'), resolve(__dirname, '../pies-ui/lib/types')],
       //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
       tsConfigFilePath: '../../tsconfig.json'
     }),
