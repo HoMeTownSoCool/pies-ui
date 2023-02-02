@@ -1,6 +1,6 @@
 {
   "name": "pies-ui",
-  "private": true,
+  "private": false,
   "version": "1.0.1",
   "description": "A Vue 3 Component Library.Uses TypeScript.",
   "main": "index.js",
