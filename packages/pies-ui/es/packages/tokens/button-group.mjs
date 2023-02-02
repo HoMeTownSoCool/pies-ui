@@ -1,4 +1,4 @@
 const buttonGroupContextKey = Symbol("buttonGroupContextKey");
-export {
-  buttonGroupContextKey
-};
+
+export { buttonGroupContextKey };
+//# sourceMappingURL=button-group.mjs.map

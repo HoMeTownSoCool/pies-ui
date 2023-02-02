@@ -1,15 +1,11 @@
 {
-  "name": "pies-ui",
   "private": true,
-  "version": "1.0.1",
-  "description": "A Vue 3 Component Library.Uses TypeScript.",
-  "main": "index.js",
   "scripts": {
     "play": "pnpm run -C play dev",
     "clear": "rimraf dist",
     "clear:cache": "rimraf node_modules/.cache/ rimraf node_modules/.vite",
     "clear:lib": "rimraf node_modules",
-    "build": "pnpm run -C packages/components build",
+    "build": "pnpm run -C packages/pies-ui build",
     "lint:eslint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:prettier": "prettier --write .",

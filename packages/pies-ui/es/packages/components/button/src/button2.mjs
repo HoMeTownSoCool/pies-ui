@@ -91,7 +91,6 @@ const Props = {
 const Emits = {
   click: (evt) => evt
 };
-export {
-  Emits,
-  Props
-};
+
+export { Emits, Props };
+//# sourceMappingURL=button2.mjs.map

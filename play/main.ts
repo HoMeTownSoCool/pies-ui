@@ -6,7 +6,7 @@ import 'uno.css';
 import './style/index.scss';
 import AppMain from './layout/AppMain/index.vue';
 
-import Pies from '../packages';
+import PiesUI from '../packages';
 // 按需引入
 // import { PiesButton, PiesButtonGroup } from '../packages';
 // app.use(PiesButton);
@@ -14,7 +14,7 @@ import Pies from '../packages';
 
 const app = createApp(App);
 
-app.use(Pies);
+app.use(PiesUI);
 
 app.component('AppMain', AppMain);
 

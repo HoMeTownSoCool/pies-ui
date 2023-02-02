@@ -1,17 +1,23 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
-const vue = require("vue");
-const buttonGroup = require("../../../tokens/button-group.js");
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+require('../../../../node_modules/.pnpm/registry.npmmirror.com_vue@3.2.45/node_modules/vue/dist/vue.runtime.esm-bundler.js');
+require('../../../tokens/index.js');
+var runtimeCore_esmBundler = require('../../../../node_modules/.pnpm/registry.npmmirror.com_@vue_runtime-core@3.2.45/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js');
+var buttonGroup = require('../../../tokens/button-group.js');
+var reactivity_esmBundler = require('../../../../node_modules/.pnpm/registry.npmmirror.com_@vue_reactivity@3.2.45/node_modules/@vue/reactivity/dist/reactivity.esm-bundler.js');
+
 function handleHref(props) {
   props.href ? window.open(props.href, props.target) : null;
   return;
 }
 const useButton = (props, emit) => {
-  const buttonGroupContext = vue.inject(buttonGroup.buttonGroupContextKey, void 0);
-  const _type = vue.computed(() => props.type || (buttonGroupContext == null ? void 0 : buttonGroupContext.type) || "");
-  const _size = vue.computed(() => props.size || (buttonGroupContext == null ? void 0 : buttonGroupContext.size) || "");
-  const _secondary = vue.computed(() => props.secondary || (buttonGroupContext == null ? void 0 : buttonGroupContext.secondary) || false);
-  const _ref = vue.ref();
+  const buttonGroupContext = runtimeCore_esmBundler.inject(buttonGroup.buttonGroupContextKey, void 0);
+  const _type = runtimeCore_esmBundler.computed(() => props.type || buttonGroupContext?.type || "");
+  const _size = runtimeCore_esmBundler.computed(() => props.size || buttonGroupContext?.size || "");
+  const _secondary = runtimeCore_esmBundler.computed(() => props.secondary || buttonGroupContext?.secondary || false);
+  const _ref = reactivity_esmBundler.ref();
   const handleClick = (evt) => {
     handleHref(props);
     emit("click", evt);
@@ -24,4 +30,6 @@ const useButton = (props, emit) => {
     handleClick
   };
 };
+
 exports.useButton = useButton;
+//# sourceMappingURL=use-button.js.map

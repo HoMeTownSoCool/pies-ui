@@ -1,9 +1,14 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
-const vue = require("vue");
-const index = require("../../../../node_modules/.pnpm/registry.npmmirror.com_@ctrl_tinycolor@3.5.0/node_modules/@ctrl/tinycolor/dist/module/index.js");
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+require('../../../../node_modules/.pnpm/registry.npmmirror.com_vue@3.2.45/node_modules/vue/dist/vue.runtime.esm-bundler.js');
+require('../../../../node_modules/.pnpm/registry.npmmirror.com_@ctrl_tinycolor@3.5.0/node_modules/@ctrl/tinycolor/dist/module/public_api.js');
+var runtimeCore_esmBundler = require('../../../../node_modules/.pnpm/registry.npmmirror.com_@vue_runtime-core@3.2.45/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.js');
+var index = require('../../../../node_modules/.pnpm/registry.npmmirror.com_@ctrl_tinycolor@3.5.0/node_modules/@ctrl/tinycolor/dist/module/index.js');
+
 function useButtonCustomStyle(props) {
-  return vue.computed(() => {
+  return runtimeCore_esmBundler.computed(() => {
     const styles = {};
     const buttonColor = props.color;
     const textColor = props.textColor;
@@ -23,4 +28,6 @@ function useButtonCustomStyle(props) {
     return styles;
   });
 }
+
 exports.useButtonCustomStyle = useButtonCustomStyle;
+//# sourceMappingURL=button-custom.js.map

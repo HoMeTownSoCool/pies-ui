@@ -1,6 +1,6 @@
 const withInstall = (main, extra) => {
   main.install = (app) => {
-    for (const comp of [main, ...Object.values(extra != null ? extra : {})]) {
+    for (const comp of [main, ...Object.values(extra ?? {})]) {
       app.component(comp.name, comp);
     }
   };
@@ -11,6 +11,6 @@ const withInstall = (main, extra) => {
   }
   return main;
 };
-export {
-  withInstall
-};
+
+export { withInstall };
+//# sourceMappingURL=install.mjs.map

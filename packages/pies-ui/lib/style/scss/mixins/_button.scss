@@ -1,0 +1,104 @@
+@use '../common/var' as *;
+@use '../mixins/mixins.scss' as *;
+
+// padding上下间距、字号、圆角
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}
+
+@mixin button-shadow($color) {
+  box-shadow: 0 2px 0 mix($color, $color-transparent, $button-shadow-tint-percent);
+}
+
+@mixin button-disabled($color, $bg, $border-color) {
+  color: $color !important;
+  cursor: not-allowed !important;
+  background-color: $bg !important;
+  border-color: $border-color !important;
+  transform: scale(1);
+  box-shadow: none !important;
+}
+
+@mixin button-variant($color, $background-color, $border-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $border-color;
+  @include button-shadow($border-color);
+
+  &:hover,
+  &:focus {
+    color: $color;
+    background-color: mix($color-white, $background-color, $button-hover-tint-percent);
+    border-color: mix($color-white, $border-color, $button-hover-tint-percent);
+  }
+
+  &:active {
+    color: $color;
+    background-color: mix($color-white, $background-color, $button-active-shade-percent);
+    border-color: mix($color-white, $border-color, $button-active-shade-percent);
+  }
+
+  &.is-disabled {
+    &,
+    &:hover,
+    &:focus,
+    &:active {
+      @include button-disabled(
+        $color-white,
+        mix($background-color, $color-white, $button-disabled-tint-percent),
+        mix($border-color, $color-white, $button-disabled-tint-percent)
+      );
+    }
+  }
+}
+
+@mixin button-secondary($background-color) {
+  @include when(secondary) {
+    $secondary-font-color: $background-color;
+    $secondary-background-color: mix($color-white, $background-color, $button-secondary-shade-percent);
+    $secondary-border-color: $secondary-background-color;
+
+    @if ($background-color == $button-default-background-color) {
+      $secondary-font-color: $button-default-font-color;
+      $secondary-background-color: mix($color-white, $color-grey, $button-secondary-shade-percent);
+      $secondary-border-color: $secondary-background-color;
+    }
+
+    color: $secondary-font-color;
+    background-color: $secondary-background-color;
+    border-color: $secondary-border-color;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      $h-f-color: mix($secondary-font-color, $secondary-background-color, $button-secondary-hover-tint-percent);
+
+      color: $secondary-font-color;
+      background-color: $h-f-color;
+      border-color: $h-f-color;
+    }
+
+    &:active {
+      $a-color: mix($secondary-font-color, $secondary-background-color, $button-secondary-active-shade-percent);
+
+      color: $secondary-font-color;
+      background-color: $a-color;
+      border-color: $a-color;
+    }
+
+    &.is-disabled {
+      &,
+      &:hover,
+      &:focus,
+      &:active {
+        @include button-disabled(
+          mix($secondary-font-color, $color-white, $button-disabled-tint-percent),
+          mix($secondary-background-color, $color-white, $button-disabled-tint-percent),
+          mix($secondary-border-color, $color-white, $button-disabled-tint-percent)
+        );
+      }
+    }
+  }
+}

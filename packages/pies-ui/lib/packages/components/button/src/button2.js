@@ -1,5 +1,7 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 const Props = {
   type: {
     type: String,
@@ -93,5 +95,7 @@ const Props = {
 const Emits = {
   click: (evt) => evt
 };
+
 exports.Emits = Emits;
 exports.Props = Props;
+//# sourceMappingURL=button2.js.map

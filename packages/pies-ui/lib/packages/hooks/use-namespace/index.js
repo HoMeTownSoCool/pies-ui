@@ -1,5 +1,7 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 const defaultNamespace = "pies";
 const statePrefix = "is-";
 const _bem = (namespace, block, blockSuffix, element, modifier) => {
@@ -39,5 +41,7 @@ const useNamespace = (block) => {
     is
   };
 };
+
 exports.defaultNamespace = defaultNamespace;
 exports.useNamespace = useNamespace;
+//# sourceMappingURL=index.js.map

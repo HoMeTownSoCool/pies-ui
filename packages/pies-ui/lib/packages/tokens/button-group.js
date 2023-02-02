@@ -1,4 +1,8 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 const buttonGroupContextKey = Symbol("buttonGroupContextKey");
+
 exports.buttonGroupContextKey = buttonGroupContextKey;
+//# sourceMappingURL=button-group.js.map

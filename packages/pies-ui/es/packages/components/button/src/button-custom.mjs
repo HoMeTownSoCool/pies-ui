@@ -1,5 +1,8 @@
-import { computed } from "vue";
-import { TinyColor } from "../../../../node_modules/.pnpm/registry.npmmirror.com_@ctrl_tinycolor@3.5.0/node_modules/@ctrl/tinycolor/dist/module/index.mjs";
+import '../../../../node_modules/.pnpm/registry.npmmirror.com_vue@3.2.45/node_modules/vue/dist/vue.runtime.esm-bundler.mjs';
+import '../../../../node_modules/.pnpm/registry.npmmirror.com_@ctrl_tinycolor@3.5.0/node_modules/@ctrl/tinycolor/dist/module/public_api.mjs';
+import { computed } from '../../../../node_modules/.pnpm/registry.npmmirror.com_@vue_runtime-core@3.2.45/node_modules/@vue/runtime-core/dist/runtime-core.esm-bundler.mjs';
+import { TinyColor } from '../../../../node_modules/.pnpm/registry.npmmirror.com_@ctrl_tinycolor@3.5.0/node_modules/@ctrl/tinycolor/dist/module/index.mjs';
+
 function useButtonCustomStyle(props) {
   return computed(() => {
     const styles = {};
@@ -21,6 +24,6 @@ function useButtonCustomStyle(props) {
     return styles;
   });
 }
-export {
-  useButtonCustomStyle
-};
+
+export { useButtonCustomStyle };
+//# sourceMappingURL=button-custom.mjs.map

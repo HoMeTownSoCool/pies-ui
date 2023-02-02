@@ -37,7 +37,6 @@ const useNamespace = (block) => {
     is
   };
 };
-export {
-  defaultNamespace,
-  useNamespace
-};
+
+export { defaultNamespace, useNamespace };
+//# sourceMappingURL=index.mjs.map

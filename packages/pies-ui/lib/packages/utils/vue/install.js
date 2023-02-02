@@ -1,8 +1,10 @@
-"use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
 const withInstall = (main, extra) => {
   main.install = (app) => {
-    for (const comp of [main, ...Object.values(extra != null ? extra : {})]) {
+    for (const comp of [main, ...Object.values(extra ?? {})]) {
       app.component(comp.name, comp);
     }
   };
@@ -13,4 +15,6 @@ const withInstall = (main, extra) => {
   }
   return main;
 };
+
 exports.withInstall = withInstall;
+//# sourceMappingURL=install.js.map

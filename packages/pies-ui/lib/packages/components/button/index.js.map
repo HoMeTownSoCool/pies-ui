@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../../../../components/button/index.ts"],"sourcesContent":["import Button from './src/button.vue';\nimport { withInstall } from '@pies-ui/utils';\nexport const PiesButton = withInstall(Button);\nexport default PiesButton;\n"],"names":["withInstall","Button"],"mappings":";;;;;;;;AAEa,MAAA,UAAA,GAAaA,oBAAYC,iBAAM;;;;;"}
