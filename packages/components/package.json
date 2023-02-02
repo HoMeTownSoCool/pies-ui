@@ -3,5 +3,8 @@
   "main": "index.ts",
   "author": "HoMeTown <hometownsocool@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "vite build"
+  },
   "dependencies": {}
 }

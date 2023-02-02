@@ -9,6 +9,7 @@
     "clear": "rimraf dist",
     "clear:cache": "rimraf node_modules/.cache/ rimraf node_modules/.vite",
     "clear:lib": "rimraf node_modules",
+    "build": "pnpm run -C packages/components build",
     "lint:eslint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:prettier": "prettier --write .",
@@ -72,6 +73,7 @@
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.3.0",
     "typescript": "^4.8.4",
+    "vite-plugin-dts": "^1.7.2",
     "vue": "^3.2.36"
   },
   "dependencies": {
