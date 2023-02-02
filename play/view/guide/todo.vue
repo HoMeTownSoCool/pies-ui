@@ -1,7 +1,7 @@
 <template>
   <app-main>
     <h2 text="24px" font="bold">未来计划</h2>
-    <p t-p-c m-t="24px">状态说明：⚪️ 未开始 &nbsp;&nbsp;🟡 未开始&nbsp;&nbsp; 🟢 已完成</p>
+    <p t-p-c m-t="24px">状态说明：⚪️ 未开始 &nbsp;&nbsp;🟡 进行中&nbsp;&nbsp; 🟢 已完成</p>
     <div flex="~">
       <div m-r="32px">
         <h3 text="18px" font="bold" m="t-38px b-16px">组件开发</h3>
