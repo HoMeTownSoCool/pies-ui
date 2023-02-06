@@ -1,5 +1,5 @@
 {
-  "version": "1.0.9",
+  "version": "1.0.10",
   "private": false,
   "name": "pies-ui",
   "scripts": {
@@ -23,6 +23,7 @@
   },
   "main": "./dist/index.es.js",
   "types": "./dist/types/components/index.d.ts",
+  "style": "./dist/style.css",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
