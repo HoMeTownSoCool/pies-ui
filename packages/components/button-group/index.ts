@@ -1,5 +1,6 @@
 import ButtonGroup from './src/button-group.vue';
 import { withInstall } from '@pies-ui/utils';
-import './style/index.scss';
+import './style/button-group.scss';
+
 export const PiesButtonGroup = withInstall(ButtonGroup);
 export default PiesButtonGroup;

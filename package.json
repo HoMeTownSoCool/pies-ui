@@ -1,11 +1,13 @@
 {
-  "version": "1.0.3",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "name": "pies-ui",
   "scripts": {
-    "play": "pnpm run -C play dev",
-    "clear": "rimraf dist",
+    "serve:play": "pnpm run -C play dev",
+    "serve:docs": "pnpm run -C docs dev",
+    "clear:dist": "rimraf dist",
     "clear:cache": "rimraf node_modules/.cache/ rimraf node_modules/.vite",
-    "clear:lib": "rimraf node_modules",
+    "clear:nm": "rimraf node_modules",
     "build": "node ./scripts/build.js",
     "lint:eslint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -13,11 +15,23 @@
     "lint:css": "stylelint 'packages/theme-chalk/src/**/*.scss' --fix --custom-syntax postcss-scss",
     "lint:ls": "ls-lint",
     "lint:staged": "lint-staged",
-    "prepare": "husky install",
-    "commit": "git-cz",
+    "git:commit": "git-cz",
     "release": "standard-version --release-as patch",
     "release:dry": "standard-version --release-as patch --dry-run",
-    "release:publish": "git push --follow-tags origin main && npm publish --access public"
+    "release:publish": "git push --follow-tags origin main && npm publish --access public",
+    "prepare": "husky install"
+  },
+  "main": "./dist/index.umd.cjs",
+  "types": ".dist/components/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -44,6 +58,12 @@
       "path": "./node_modules/git-cz"
     }
   },
+  "files": [
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "dist"
+  ],
   "devDependencies": {
     "@commitlint/cli": "^17.2.0",
     "@commitlint/config-conventional": "^17.2.0",
@@ -70,15 +90,16 @@
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.3.0",
     "typescript": "^4.8.4",
+    "unplugin-vue-define-options": "^1.2.1",
     "vite-plugin-dts": "^1.7.2",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue": "^3.2.36"
   },
   "dependencies": {
     "@pies-ui/components": "workspace:^1.0.0",
+    "@pies-ui/constants": "workspace:^1.0.0",
     "@pies-ui/eslint-config": "workspace:^1.0.0",
-    "@pies-ui/hooks": "workspace:^1.0.0",
-    "@pies-ui/theme-chalk": "workspace:^1.0.0",
-    "@pies-ui/tokens": "workspace:^1.0.0",
-    "@pies-ui/utils": "workspace:^1.0.0"
+    "@pies-ui/utils": "workspace:^1.0.0",
+    "@vueuse/core": "^9.12.0"
   }
 }

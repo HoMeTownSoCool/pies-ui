@@ -1,5 +1,5 @@
 {
-  "name": "@pies-ui/tokens",
+  "name": "@pies-ui/constants",
   "version": "1.0.0",
   "main": "index.ts",
   "author": "HoMeTown <hometownsocool@gmail.com>",

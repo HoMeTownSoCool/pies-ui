@@ -1,26 +1,25 @@
 const path = require('path');
-const fs = require('fs');
 const { build, defineConfig } = require('vite');
 
 const vue = require('@vitejs/plugin-vue');
 const dts = require('vite-plugin-dts');
-const DefineOptions = require('unplugin-vue-define-options/vite');
 
+const vueSetupExtend = require('vite-plugin-vue-setup-extend');
 const rootDir = path.resolve(__dirname, '../');
-const outDir = resolve('packages/pies/dist');
+const outDir = path.resolve(__dirname, '../dist');
 
 const baseConfig = defineConfig({
   plugins: [
     vue(),
-    DefineOptions(),
+    vueSetupExtend(),
     dts({
-      include: ['packages/pies', 'packages/components'],
+      include: ['packages/components'],
       outputDir: path.resolve(outDir, 'types')
     })
   ],
   build: {
     lib: {
-      entry: resolve('packages/pies/index.ts'),
+      entry: resolve('packages/components/index.ts'),
       name: 'pies',
       fileName: format => `index.${format}.js`
     },
@@ -44,16 +43,12 @@ async function main() {
   // build
   await build(baseConfig);
 
-  await copyFiles();
+  // await copyFiles();
 }
 
-async function copyFiles() {
-  // fs.copyFileSync(
-  //   resolve('packages/pies/package.json'),
-  //   resolve('packages/pies/dist/package.json')
-  // )
-  fs.copyFileSync(resolve('README.md'), resolve('packages/pies/README.md'));
-}
+// async function copyFiles() {
+//   fs.copyFileSync(resolve('README.md'), resolve('packages/pies/README.md'));
+// }
 
 function resolve(...urlOrUrls) {
   return path.resolve(rootDir, ...urlOrUrls);
