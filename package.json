@@ -5,7 +5,7 @@
     "clear": "rimraf dist",
     "clear:cache": "rimraf node_modules/.cache/ rimraf node_modules/.vite",
     "clear:lib": "rimraf node_modules",
-    "build": "pnpm run -C packages/pies-ui build",
+    "build": "node ./scripts/build.js",
     "lint:eslint": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:prettier": "prettier --write .",
@@ -79,5 +79,6 @@
     "@pies-ui/theme-chalk": "workspace:^1.0.0",
     "@pies-ui/tokens": "workspace:^1.0.0",
     "@pies-ui/utils": "workspace:^1.0.0"
-  }
+  },
+  "version": null
 }
