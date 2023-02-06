@@ -2,6 +2,12 @@
 
 ## 更新历史
 
+### [1.0.8](https://github.com/HoMeTownSoCool/pies-ui/compare/v1.0.7...v1.0.8) (2023-02-06)
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+- 调整包依赖源 ([2318ff9](https://github.com/HoMeTownSoCool/pies-ui/commit/2318ff9afae3fc1a948f88efa5ef264223d12b56))
+
 ### [1.0.7](https://github.com/HoMeTownSoCool/pies-ui/compare/v1.0.4...v1.0.7) (2023-02-06)
 
 ### ♻️ Code Refactoring | 代码重构
