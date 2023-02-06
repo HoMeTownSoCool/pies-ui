@@ -1,0 +1,33 @@
+{
+  "name": "pies-ui",
+  "version": "1.0.3",
+  "description": "A Vue 3 Component Library.Uses TypeScript.",
+  "keywords": [
+    "pies-ui",
+    "component library",
+    "ui framework",
+    "ui",
+    "vue"
+  ],
+  "license": "MIT",
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.ts",
+  "unpkg": "dist/index.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/types/pies/index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "style": "dist/style.css",
+  "scripts": {},
+  "author": "HoMeTown",
+  "peerDependencies": {
+    "vue": "^3.2.0"
+  }
+}
