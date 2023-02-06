@@ -2,6 +2,12 @@
 
 ## 更新历史
 
+### [1.0.9](https://github.com/HoMeTownSoCool/pies-ui/compare/v1.0.8...v1.0.9) (2023-02-06)
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+- 完成组件库打包发布 ([c605a06](https://github.com/HoMeTownSoCool/pies-ui/commit/c605a069e2cd18bcff6a5cf96bf09a52cd476383))
+
 ### [1.0.8](https://github.com/HoMeTownSoCool/pies-ui/compare/v1.0.7...v1.0.8) (2023-02-06)
 
 ### 🚀 Chore | 构建/工程依赖/工具
