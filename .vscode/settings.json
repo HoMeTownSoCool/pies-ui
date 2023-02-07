@@ -14,5 +14,6 @@
   },
   "stylelint.customSyntax": "postcss-scss",
   "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
-  "nuxt.isNuxtApp": false
+  "nuxt.isNuxtApp": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
 }

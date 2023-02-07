@@ -1,18 +1,13 @@
 import { createApp } from 'vue';
 import App from './app.vue';
 import router from './router/index';
-// import '@pies-ui/theme-chalk/src/index.scss';
 import 'uno.css';
 import './style/index.scss';
 import AppMain from './layout/AppMain/index.vue';
 
 import PiesUI from '@pies-ui/components';
-// 按需引入
-// import { PiesButton, PiesButtonGroup } from '@pies-ui/components';
 const app = createApp(App);
 app.use(PiesUI);
-// app.use(PiesButton);
-// app.use(PiesButtonGroup);
 
 app.component('AppMain', AppMain);
 

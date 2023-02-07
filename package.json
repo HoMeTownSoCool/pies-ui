@@ -70,8 +70,15 @@
     "@commitlint/config-conventional": "^17.2.0",
     "@ctrl/tinycolor": "^3.5.0",
     "@ls-lint/ls-lint": "^1.11.2",
+    "@pies-ui/components": "workspace:^1.0.0",
+    "@pies-ui/constants": "workspace:^1.0.0",
+    "@pies-ui/eslint-config": "workspace:^1.0.0",
+    "@pies-ui/hooks": "workspace:^1.0.0",
+    "@pies-ui/theme-chalk": "workspace:^1.0.0",
+    "@pies-ui/utils": "workspace:^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.42.0",
     "@typescript-eslint/parser": "^5.42.0",
+    "@vueuse/core": "^9.12.0",
     "commitizen": "^4.2.5",
     "eslint": "^8.26.0",
     "eslint-config-prettier": "^8.6.0",
@@ -94,12 +101,6 @@
     "unplugin-vue-define-options": "^1.2.1",
     "vite-plugin-dts": "^1.7.2",
     "vite-plugin-vue-setup-extend": "^0.4.0",
-    "vue": "^3.2.36",
-    "@pies-ui/components": "workspace:^1.0.0",
-    "@pies-ui/constants": "workspace:^1.0.0",
-    "@pies-ui/eslint-config": "workspace:^1.0.0",
-    "@pies-ui/utils": "workspace:^1.0.0",
-    "@vueuse/core": "^9.12.0"
-  },
-  "dependencies": {}
+    "vue": "^3.2.36"
+  }
 }

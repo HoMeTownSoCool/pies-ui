@@ -20,6 +20,11 @@ const routes: RouteRecordRaw[] = [
     name: 'components',
     component: Components,
     children: componentsRoutes
+  },
+  {
+    path: '/fun',
+    name: 'fun',
+    component: () => import('../view/fun/index.vue')
   }
 ];
 

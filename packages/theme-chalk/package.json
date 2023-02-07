@@ -1,14 +1,10 @@
 {
-  "name": "@pies-ui/eslint-config",
+  "name": "@pies-ui/theme-chalk",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
   },
   "keywords": [],
   "author": "HoMeTown <hometownsocool@gmail.com>"

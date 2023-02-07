@@ -11,6 +11,8 @@ importers:
       '@pies-ui/components': workspace:^1.0.0
       '@pies-ui/constants': workspace:^1.0.0
       '@pies-ui/eslint-config': workspace:^1.0.0
+      '@pies-ui/hooks': workspace:^1.0.0
+      '@pies-ui/theme-chalk': workspace:^1.0.0
       '@pies-ui/utils': workspace:^1.0.0
       '@typescript-eslint/eslint-plugin': ^5.42.0
       '@typescript-eslint/parser': ^5.42.0
@@ -46,6 +48,8 @@ importers:
       '@pies-ui/components': link:packages/components
       '@pies-ui/constants': link:packages/constants
       '@pies-ui/eslint-config': link:packages/eslint-config
+      '@pies-ui/hooks': link:packages/hooks
+      '@pies-ui/theme-chalk': link:packages/theme-chalk
       '@pies-ui/utils': link:packages/utils
       '@typescript-eslint/eslint-plugin': 5.50.0_33b838c6f29e0454280dad39d7a39534
       '@typescript-eslint/parser': 5.50.0_eslint@8.33.0+typescript@4.9.5
